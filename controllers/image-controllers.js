@@ -30,7 +30,7 @@ const uploadImageController = async (req,res)=>{
         await newlyUploadedImage.save();
 
         //delete the upload image folder 
-        // fs.unlinkSync(req.file.path);
+        fs.unlinkSync(req.file.path);
 
         res.status(201).json({
             success : true,
